@@ -1,0 +1,7 @@
+https://huggingface.co/datasets/NebulaByte/E-Commerce_Customer_Support_Conversations
+
+https://huggingface.co/datasets/rjac/e-commerce-customer-support-qa/viewer/default/train?row=0&views%5B%5D=train
+
+https://huggingface.co/datasets/GajurelKshitiz/Ecommerce-Chat-Dataset
+
+https://huggingface.co/datasets/DReaper/ecommerce-chatbot-dataset
