@@ -5,3 +5,9 @@ https://huggingface.co/datasets/rjac/e-commerce-customer-support-qa/viewer/defau
 https://huggingface.co/datasets/GajurelKshitiz/Ecommerce-Chat-Dataset
 
 https://huggingface.co/datasets/DReaper/ecommerce-chatbot-dataset
+
+Twitter Customer Support Dataset
+https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+
+Customer Support Intent Dataset
+https://www.kaggle.com/datasets/scodepy/customer-support-intent-dataset
