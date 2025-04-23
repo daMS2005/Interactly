@@ -24,8 +24,6 @@ def analyze_intent_and_ner(client, user_message, product_list, model_name):
     """
     response = client.generate(prompt=prompt, model=model_name)
     
-    print(f"{response.response}")
-    
     try:
         result = json.loads(response.response.strip())
         result["products"] = [p for p in result.get("products", []) if p in product_list]
@@ -35,7 +33,7 @@ def analyze_intent_and_ner(client, user_message, product_list, model_name):
 
 def analyze_sentiment(client, user_message, products, model_name):
     """
-    Analyze sentiment if intent is Feedback.
+    Analyze sentiment and return a numerical score between 1 and 5.
 
     Args:
         client (ollama.Client): Ollama client instance.
@@ -44,19 +42,23 @@ def analyze_sentiment(client, user_message, products, model_name):
         model_name (str): Name of the model to use.
 
     Returns:
-        str: Sentiment (Positive, Negative, Neutral) or None.
+        float: Sentiment score (1 to 5) or None.
     """
-    if not products:
-        return None
 
     prompt = f"""
     Analyze the sentiment of the following feedback message.
     Message: {user_message}
-    Products: {', '.join(products)}
-    Respond only with one word: Positive, Negative, or Neutral.
+    Respond with a json object containing a single key "score" with a value between 1 and 5.
+    The score should reflect the sentiment of the message, where 1 is very negative and 5 is very positive.
+    Do not include any other text besides the JSON.
     """
     response = client.generate(prompt=prompt, model=model_name)
-    return response.response.strip()
+    # Extract the score from the response
+    try:
+        result = json.loads(response.response.strip())
+        return int(result.get("score", 0))
+    except (json.JSONDecodeError, ValueError):
+        return None
 
 def generate_response(client, user_message, intent, products, sentiment, model_name):
     """

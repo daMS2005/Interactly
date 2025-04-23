@@ -1,0 +1,23 @@
+{
+    "total": 80,
+    "correct": 71,
+    "incorrect": 9,
+    "per_intent": {
+        "Contact": {
+            "correct": 18,
+            "incorrect": 2
+        },
+        "Feedback": {
+            "correct": 13,
+            "incorrect": 7
+        },
+        "Payment": {
+            "correct": 20,
+            "incorrect": 0
+        },
+        "Refund": {
+            "correct": 20,
+            "incorrect": 0
+        }
+    }
+}

@@ -1,0 +1,81 @@
+text,actual_intent,predicted_intent
+help chattinb with an operator,Contact,Contact
+need assistance to speak with somebody,Contact,Contact
+i dont know what i need to do to speak with an operator,Contact,Contact
+i wantg assistance to call customer service,Contact,Contact
+ya have a free phone number to talk to customer assistance,Contact,Other
+I try to contact a live agent,Contact,Contact
+will you tell me what hours I can contact customer service?,Contact,Contact
+I do not know how I can contact customer service,Contact,Contact
+how to talk with somebody,Contact,Other
+can you help me to talk to a live agent?,Contact,Contact
+could you help me contacting customer service?,Contact,Contact
+how do I contact an agent?,Contact,Contact
+i need help speaking to a live agent,Contact,Contact
+I want help chatting with someone,Contact,Contact
+uhave a  mail address to contact customer assistance,Contact,Contact
+i do not know how to call customer service,Contact,Contact
+how can I talk to an agent?,Contact,Contact
+I want help talking to an agent,Contact,Contact
+help me speak to a live agent,Contact,Contact
+i try to talk with a human agent,Contact,Contact
+I don't know how I can leave a review,Feedback,Feedback
+I need help to file a customer claim against your business,Feedback,Contact
+I have to leave a review for your company,Feedback,Feedback
+what do I have to do to leave a review for a service?,Feedback,Feedback
+i need assistance making a fucking consumer reclamation,Feedback,Refund
+help to file a complaint against your business,Feedback,Contact
+what do I have to do to leave a review for your company?,Feedback,Feedback
+I want assistance to file a complaint,Feedback,Feedback
+how could I submit some feedback?,Feedback,Feedback
+can you help me to leave a review?,Feedback,Feedback
+help filing a complaint,Feedback,Contact
+is there a section to submit some feedback?,Feedback,Feedback
+I don't know what to do to leave a review,Feedback,Feedback
+I am trying to leave a review,Feedback,Feedback
+I'm not happy wiht ur work help me to lodge a complaint,Feedback,Feedback
+leave review for a service,Feedback,Feedback
+where can I file a complaint against your business?,Feedback,Contact
+I call to lodge a consumer reclamation against your company,Feedback,Refund
+leaving review for a service,Feedback,Feedback
+i need help filing a complaint against ur company,Feedback,Contact
+assistance to solve issues with payments,Payment,Payment
+I want assistance solving an issue with payments,Payment,Payment
+I want assistance to report an issue with payment,Payment,Payment
+could you help me report an issue with payments?,Payment,Payment
+help me to check what payment methods are available,Payment,Payment
+I want help to check what payment methods are available,Payment,Payment
+is it possible to check your allowed payment methods?,Payment,Payment
+I want to report an issue with payments,Payment,Payment
+can I pay with amex?,Payment,Payment
+i need help checking what payment methods are accepted,Payment,Payment
+could I check what payment methods you accept?,Payment,Payment
+help me to solve an issue with payments,Payment,Payment
+allowed payment options,Payment,Payment
+would it be possible to report payment issues?,Payment,Payment
+I would like to check your allowed payment methods,Payment,Payment
+assistance to check the available payment options,Payment,Payment
+want help seeing you allowed payment methods,Payment,Payment
+assistance to see what payment methods are accepted,Payment,Payment
+I don't know what to do to report issues with payment,Payment,Payment
+will you tell me your allowed payment methods?,Payment,Payment
+I demand a refund,Refund,Refund
+I need my money back,Refund,Refund
+show me in what cases can I ask for a refund,Refund,Refund
+help me checking my refund status,Refund,Refund
+I would like to check how long refunds take,Refund,Refund
+assistance checking if there is anything new on my refund,Refund,Refund
+help checking how long refunds take,Refund,Refund
+I need assistance to get refunds of money,Refund,Refund
+I don't know what I need to do to check my refund status,Refund,Refund
+help checking in what cases can I ask for refunds,Refund,Refund
+could you help me getting a refund?,Refund,Refund
+could you help me getting refunds of money?,Refund,Refund
+help me check if there is anything wrong with my refund,Refund,Refund
+I need assistance getting refunds of money,Refund,Refund
+where to check the status of the refund?,Refund,Refund
+I do not know how I can track the refund,Refund,Refund
+can you help me to check the status of the refund?,Refund,Refund
+I want assistance to check my refund status,Refund,Refund
+could you show me my refund status?,Refund,Refund
+where do I get a refund of money?,Refund,Refund

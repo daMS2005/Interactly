@@ -43,7 +43,7 @@ def evaluate_intent_accuracy(df, product_list, model_name, output_dir):
     predictions_df = pd.DataFrame(predictions)
 
     # Save intermediate results
-    output_path = os.path.join(output_dir, f"{model_name}_predictions.csv")
+    output_path = os.path.join(output_dir, f"{model_name}_intent_predictions.csv")
     predictions_df.to_csv(output_path, index=False)
     logging.info(f"Predictions for model '{model_name}' saved to {output_path}")
 
@@ -142,26 +142,15 @@ def main():
 
     # Define product list and models
     product_list = ["ProductA", "ProductB", "ProductC"]  # Products aren't used here - it's just a placeholder
-    models = ["llama3:8b", "mistral", "deepseek"]
+    models = ["llama3:8b"]
 
     # Evaluate each model and save results
-    all_predictions = []
-    all_metrics = {}
     for model_name in models:
         predictions_df = evaluate_intent_accuracy(df, product_list, model_name, output_dir)
         metrics = calculate_metrics(predictions_df)
-        all_predictions.append(predictions_df)
-        all_metrics[model_name] = metrics
+        metrics_output_path = os.path.join(output_dir, f"{model_name}_intent_metrics.json")
+        save_results(metrics, metrics_output_path)
         logging.info(f"Model: {model_name}, Accuracy: {metrics['correct'] / metrics['total']:.2%}")
-
-    # Save combined predictions and metrics
-    combined_predictions = pd.concat(all_predictions, ignore_index=True)
-    combined_predictions_path = os.path.join(output_dir, "combined_predictions.csv")
-    combined_predictions.to_csv(combined_predictions_path, index=False)
-    logging.info(f"Combined predictions saved to {combined_predictions_path}")
-
-    metrics_output_path = os.path.join(output_dir, "metrics.json")
-    save_results(all_metrics, metrics_output_path)
 
 if __name__ == "__main__":
     main()
