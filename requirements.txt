@@ -1,0 +1,5 @@
+ollama
+requests
+pandas
+nltk
+scikit-learn
