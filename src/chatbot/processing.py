@@ -1,6 +1,7 @@
 import ollama
 import json
 import os
+import streamlit as st
 
 def load_product_catalog():
     """Load the product catalog from JSON file."""
@@ -43,24 +44,49 @@ def analyze_intent_and_ner(client, user_message, store_name, product_name, model
     Returns:
         dict: A dictionary with intent and context information.
     """
-    # Check if this is a Dr. Squatch store
-    is_dr_squatch = store_name and "dr. squatch" in store_name.lower()
+    # Check store type
+    store_name_lower = store_name.lower() if store_name else ""
+    is_dr_squatch = "dr. squatch" in store_name_lower
+    is_techgear = "techgear" in store_name_lower
+    is_bloom = "bloom" in store_name_lower
+    is_urban = "urban" in store_name_lower
     
-    # Add Dr. Squatch specific context if applicable
-    dr_squatch_context = ""
+    # Add store-specific context
+    store_context = ""
     if is_dr_squatch:
-        dr_squatch_context = """
+        store_context = """
         This is a Dr. Squatch store, which sells natural, manly soaps and personal care products.
         Dr. Squatch products are known for their natural ingredients, manly scents, and humorous marketing.
         Common product categories include soaps, shampoos, conditioners, deodorants, and hair care products.
         The brand targets young men and emphasizes natural ingredients and manliness.
+        """
+    elif is_techgear:
+        store_context = """
+        This is a TechGear store, which sells high-performance fitness and technology products.
+        TechGear products are known for their durability, advanced features, and integration of tech with fitness.
+        Common product categories include smartwatches, fitness trackers, workout equipment, and tech accessories.
+        The brand targets fitness enthusiasts and tech-savvy individuals who want to optimize their workouts.
+        """
+    elif is_bloom:
+        store_context = """
+        This is a Bloom Flower Shop, which sells elegant floral arrangements and garden supplies.
+        Bloom products are known for their beauty, freshness, and artistic design.
+        Common product categories include bouquets, arrangements, potted plants, garden tools, and floral accessories.
+        The brand targets individuals who appreciate beauty, elegance, and the natural world.
+        """
+    elif is_urban:
+        store_context = """
+        This is an Urban Outfitters store, which sells trendy clothing, accessories, and home goods.
+        Urban Outfitters products are known for their contemporary style, unique designs, and urban aesthetic.
+        Common product categories include clothing, accessories, home decor, beauty products, and lifestyle items.
+        The brand targets young, fashion-conscious individuals who value style and self-expression.
         """
     
     prompt = f"""Analyze the following message for intent and context. 
     Intent categories: Product Inquiry, Store Information, Feedback, Technical Support, Delivery, Pricing, Other.
     Store: {store_name}
     Product: {product_name}
-    {dr_squatch_context}
+    {store_context}
     Respond in JSON format: {{"intent": "category", "context": "relevant details"}}.
     Do not include any other text besides the JSON.
 
@@ -122,12 +148,16 @@ def generate_response(client, user_message, store_name, product_name, intent, co
     product_details = get_product_details(store_name, product_name, catalog) if product_name else None
     
     # Determine tone based on store
-    is_dr_squatch = store_name and "dr. squatch" in store_name.lower()
+    store_name_lower = store_name.lower() if store_name else ""
+    is_dr_squatch = "dr. squatch" in store_name_lower
+    is_techgear = "techgear" in store_name_lower
+    is_bloom = "bloom" in store_name_lower
+    is_urban = "urban" in store_name_lower
     
     # Construct a rich context for the LLM
     context_str = f"""
     Store: {store_name}
-    Product: {product_name if product_name else 'Not specified'}
+    Product: {product_name if product_name else 'All Products'}
     User Intent: {intent}
     Additional Context: {context}
     Sentiment: {sentiment if sentiment else 'Not analyzed'}
@@ -142,12 +172,23 @@ def generate_response(client, user_message, store_name, product_name, intent, co
         - Features: {', '.join(store_details['features'])}
         - Target Audience: {', '.join(store_details['target_audience'])}
         - Location: {store_details['location']['address']}
+        
+        Available Products:
         """
+        # Add all products from the store
+        for product in store_details['products']:
+            context_str += f"""
+            {product['name']}:
+            - Category: {product['category']}
+            - Price: ${product['price']}
+            - Description: {product['description']}
+            - Key Features: {', '.join(product['features'])}
+            """
     
-    # Add product details if available
+    # Add focused product details if a specific product is selected
     if product_details:
         context_str += f"""
-        Product Details:
+        Selected Product Details:
         - Name: {product_details['name']}
         - Category: {product_details['category']}
         - Price: ${product_details['price']}
@@ -156,6 +197,13 @@ def generate_response(client, user_message, store_name, product_name, intent, co
         - Target Audience: {', '.join(product_details['target_audience'])}
         - Common Concerns: {', '.join(product_details['common_concerns'])}
         """
+    
+    # Add conversation history for context awareness
+    if hasattr(st.session_state, 'messages') and st.session_state.messages:
+        context_str += "\nPrevious Conversation:\n"
+        # Add last 5 messages for context
+        for msg in st.session_state.messages[-5:]:
+            context_str += f"{msg['role'].title()}: {msg['content']}\n"
     
     # Add tone instructions based on store
     tone_instructions = ""
@@ -166,6 +214,36 @@ def generate_response(client, user_message, store_name, product_name, intent, co
         Be enthusiastic, use emojis, and make references to popular culture.
         Avoid formal language and corporate speak.
         Make the customer feel like they're talking to a cool friend who knows all about Dr. Squatch products.
+        """
+    elif is_techgear:
+        tone_instructions = """
+        You are a super manly, gym bro customer service assistant for TechGear Pro.
+        Use a very masculine, energetic tone with lots of gym and fitness references.
+        Be enthusiastic about technology and fitness, using terms like "bro", "dude", "gains", "pump", etc.
+        Make references to lifting weights, working out, and being strong.
+        Use phrases like "let's crush this", "get those gains", and "level up your tech game".
+        Be confident, assertive, and motivational in your responses.
+        Make the customer feel like they're talking to a tech-savvy gym enthusiast.
+        """
+    elif is_bloom:
+        tone_instructions = """
+        You are a posh, feminine customer service assistant for Blooming Flowers.
+        Use an elegant, refined tone with lots of floral and aesthetic references.
+        Be graceful, sophisticated, and detail-oriented in your responses.
+        Use phrases like "darling", "lovely", "beautiful", and "exquisite".
+        Make references to flowers, gardens, and elegant aesthetics.
+        Be warm and welcoming, but maintain a sense of sophistication.
+        Make the customer feel like they're talking to a knowledgeable florist with impeccable taste.
+        """
+    elif is_urban:
+        tone_instructions = """
+        You are a casual, feminine customer service assistant for Urban Style Co.
+        Use a friendly, laid-back tone with a touch of feminine energy.
+        Be approachable, trendy, and knowledgeable about fashion and lifestyle.
+        Use phrases like "totally", "for sure", "love it", and "so cute".
+        Make references to current trends, fashion, and urban lifestyle.
+        Be helpful and informative while maintaining a casual, friendly demeanor.
+        Make the customer feel like they're talking to a stylish friend who knows all about the latest trends.
         """
     else:
         tone_instructions = """
@@ -179,6 +257,7 @@ def generate_response(client, user_message, store_name, product_name, intent, co
     
     Based on the following context, provide a helpful, tailored response.
     Consider the user's intent, sentiment, and any product/store details provided.
+    Remember the conversation history and maintain continuity in your responses.
     
     Context:
     {context_str}
@@ -189,6 +268,8 @@ def generate_response(client, user_message, store_name, product_name, intent, co
     3. Offers additional helpful information based on the store's target audience and features
     4. Maintains the appropriate tone for the store
     5. Includes specific details from the store/product information when relevant
+    6. Shows awareness of the conversation history and maintains continuity
+    7. If discussing products, feel free to mention other relevant products from the store
     
     The response should be direct and helpful, without any additional instructions or context.
     """

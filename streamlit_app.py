@@ -47,6 +47,42 @@ def get_product_details(store_name, product_name, catalog):
                 return product
     return None
 
+def get_video_path(store_name, product_name=None):
+    """Get the path to the video for a store or product."""
+    videos_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "videos")
+    
+    # Map store names to video files - using exact names from the catalog
+    store_videos = {
+        "Dr. Squatch": "drsquatch.mp4",
+        "TechGear Pro": "techwatch.mp4",
+        "Blooming Flowers": "flowershop.mp4",
+        "Urban Style Co.": "urbanclothes.mp4"
+    }
+    
+    # If a specific product is selected, we could map products to videos here
+    # For now, we'll just use the store video
+    
+    # Check for exact match first
+    if store_name in store_videos:
+        video_file = store_videos[store_name]
+        return os.path.join(videos_dir, video_file)
+    
+    # If no exact match, try case-insensitive partial match
+    store_name_lower = store_name.lower() if store_name else ""
+    
+    # Find the matching store name (case-insensitive)
+    matching_store = None
+    for store in store_videos:
+        if store.lower() in store_name_lower or store_name_lower in store.lower():
+            matching_store = store
+            break
+    
+    if matching_store and matching_store in store_videos:
+        video_file = store_videos[matching_store]
+        return os.path.join(videos_dir, video_file)
+    
+    return None
+
 def main():
     # Initialize session state
     initialize_session_state()
@@ -83,6 +119,11 @@ def main():
 
     # Main content area
     st.title("Interactly - AI Customer Service")
+    
+    # Display video if available
+    video_path = get_video_path(selected_store, st.session_state.selected_product)
+    if video_path and os.path.exists(video_path):
+        st.video(video_path)
     
     # Chat interface
     st.subheader("Chat with our AI Assistant")
