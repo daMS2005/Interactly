@@ -1,0 +1,697 @@
+{
+    "stores": [
+        {
+            "id": "TECH001",
+            "name": "TechGear Pro",
+            "description": "Premium technology and gadgets store offering cutting-edge devices and accessories",
+            "location": {
+                "address": "123 Tech Plaza, Silicon Valley",
+                "phone": "(555) 123-4567",
+                "email": "info@techgearpro.com",
+                "hours": "Mon-Sat: 10am-8pm, Sun: 11am-6pm"
+            },
+            "features": [
+                "Expert tech consultation",
+                "Extended warranty options",
+                "Trade-in program",
+                "Technical support",
+                "Installation services"
+            ],
+            "target_audience": [
+                "Tech enthusiasts",
+                "Professional users",
+                "Early adopters",
+                "Business customers"
+            ],
+            "products": [
+                {
+                    "id": "SW001",
+                    "name": "Smart Watch Pro",
+                    "category": "Wearables",
+                    "price": 299.99,
+                    "description": "Advanced smartwatch with health monitoring and fitness tracking capabilities",
+                    "features": [
+                        "Heart rate monitoring",
+                        "Sleep tracking",
+                        "GPS navigation",
+                        "Water resistant",
+                        "5-day battery life"
+                    ],
+                    "specifications": {
+                        "display": "1.4-inch AMOLED",
+                        "battery": "300mAh",
+                        "compatibility": "iOS 14+, Android 8+",
+                        "water_resistance": "IP68",
+                        "weight": "45g"
+                    },
+                    "target_audience": [
+                        "Fitness enthusiasts",
+                        "Health-conscious professionals",
+                        "Tech-savvy individuals"
+                    ],
+                    "use_cases": [
+                        "Fitness tracking",
+                        "Health monitoring",
+                        "Navigation",
+                        "Notifications"
+                    ],
+                    "common_concerns": [
+                        "Battery life",
+                        "Water resistance",
+                        "Compatibility",
+                        "Accuracy of health metrics"
+                    ],
+                    "warranty": "2 years",
+                    "in_stock": true,
+                    "rating": 4.5,
+                    "reviews_count": 1250
+                },
+                {
+                    "id": "WE002",
+                    "name": "Wireless Earbuds",
+                    "category": "Audio",
+                    "price": 159.99,
+                    "description": "Premium wireless earbuds with active noise cancellation and crystal-clear sound",
+                    "features": [
+                        "Active Noise Cancellation",
+                        "Touch controls",
+                        "Voice assistant support",
+                        "Wireless charging",
+                        "IPX5 water resistance"
+                    ],
+                    "specifications": {
+                        "battery_life": "6 hours (with ANC)",
+                        "charging_case": "24 hours total",
+                        "bluetooth": "5.2",
+                        "weight": "5g per earbud",
+                        "driver_size": "10mm"
+                    },
+                    "target_audience": [
+                        "Music enthusiasts",
+                        "Professionals",
+                        "Students",
+                        "Commuters"
+                    ],
+                    "use_cases": [
+                        "Music listening",
+                        "Phone calls",
+                        "Video conferencing",
+                        "Gaming"
+                    ],
+                    "common_concerns": [
+                        "Battery life",
+                        "Sound quality",
+                        "Comfort for long wear",
+                        "Connection stability"
+                    ],
+                    "warranty": "1 year",
+                    "in_stock": true,
+                    "rating": 4.7,
+                    "reviews_count": 2300
+                }
+            ]
+        },
+        {
+            "id": "FLOW001",
+            "name": "Blooming Flowers",
+            "description": "Premium flower shop offering fresh arrangements and professional floral services",
+            "location": {
+                "address": "456 Garden Lane, Downtown",
+                "phone": "(555) 987-6543",
+                "email": "hello@bloomingflowers.com",
+                "hours": "Mon-Sat: 9am-6pm, Sun: 10am-4pm"
+            },
+            "features": [
+                "Fresh daily deliveries",
+                "Custom arrangements",
+                "Wedding services",
+                "Corporate accounts",
+                "Subscription service"
+            ],
+            "target_audience": [
+                "Event planners",
+                "Wedding couples",
+                "Corporate clients",
+                "Gift givers",
+                "Home decorators"
+            ],
+            "products": [
+                {
+                    "id": "FL001",
+                    "name": "Classic Red Roses Bouquet",
+                    "category": "Flowers",
+                    "price": 49.99,
+                    "description": "A stunning bouquet of 12 fresh red roses, perfect for romantic occasions",
+                    "features": [
+                        "12 premium red roses",
+                        "Fresh cut stems",
+                        "Decorative wrapping",
+                        "Care instructions included",
+                        "Free vase with purchase"
+                    ],
+                    "specifications": {
+                        "flower_count": 12,
+                        "stem_length": "18 inches",
+                        "freshness_guarantee": "7 days",
+                        "arrangement_style": "Classic bouquet",
+                        "wrapping": "Tissue paper and ribbon"
+                    },
+                    "target_audience": [
+                        "Romantic partners",
+                        "Anniversary celebrants",
+                        "Valentine's Day shoppers",
+                        "Gift givers"
+                    ],
+                    "use_cases": [
+                        "Romantic gestures",
+                        "Anniversary gifts",
+                        "Valentine's Day",
+                        "Apology gifts"
+                    ],
+                    "common_concerns": [
+                        "Freshness duration",
+                        "Delivery timing",
+                        "Presentation",
+                        "Care instructions"
+                    ],
+                    "warranty": "Freshness guarantee - 7 days",
+                    "in_stock": true,
+                    "rating": 4.8,
+                    "reviews_count": 320,
+                    "delivery_options": [
+                        "Same-day delivery (local)",
+                        "Next-day delivery",
+                        "Store pickup"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Trim stems daily, change water every 2-3 days, keep away from direct sunlight"
+                },
+                {
+                    "id": "FL002",
+                    "name": "Spring Garden Mixed Bouquet",
+                    "category": "Flowers",
+                    "price": 39.99,
+                    "description": "A vibrant mix of seasonal spring flowers including tulips, daffodils, and hyacinths",
+                    "features": [
+                        "Seasonal spring flowers",
+                        "Colorful arrangement",
+                        "Mixed variety",
+                        "Decorative wrapping",
+                        "Care instructions included"
+                    ],
+                    "specifications": {
+                        "flower_count": "15-20 stems",
+                        "stem_length": "12-16 inches",
+                        "freshness_guarantee": "5 days",
+                        "arrangement_style": "Mixed garden bouquet",
+                        "wrapping": "Kraft paper and twine"
+                    },
+                    "target_audience": [
+                        "Spring celebration hosts",
+                        "Easter shoppers",
+                        "Home decorators",
+                        "Garden enthusiasts"
+                    ],
+                    "use_cases": [
+                        "Spring celebrations",
+                        "Easter decorations",
+                        "Home decoration",
+                        "Gift for garden lovers"
+                    ],
+                    "common_concerns": [
+                        "Seasonal availability",
+                        "Color variety",
+                        "Freshness duration",
+                        "Care instructions"
+                    ],
+                    "warranty": "Freshness guarantee - 5 days",
+                    "in_stock": true,
+                    "rating": 4.6,
+                    "reviews_count": 185,
+                    "delivery_options": [
+                        "Same-day delivery (local)",
+                        "Next-day delivery",
+                        "Store pickup"
+                    ],
+                    "seasonal_availability": "Spring (March-May)",
+                    "care_instructions": "Trim stems daily, change water every 2-3 days, keep in cool location"
+                }
+            ]
+        },
+        {
+            "id": "FASH001",
+            "name": "Urban Style Co.",
+            "description": "Contemporary fashion brand offering trendy and sustainable clothing for modern urban lifestyle",
+            "location": {
+                "address": "789 Fashion District, Downtown",
+                "phone": "(555) 789-0123",
+                "email": "style@urbanstyleco.com",
+                "hours": "Mon-Sat: 10am-9pm, Sun: 11am-7pm"
+            },
+            "features": [
+                "Sustainable materials",
+                "Custom sizing available",
+                "Personal styling service",
+                "Loyalty program",
+                "Online shopping with in-store pickup"
+            ],
+            "target_audience": [
+                "Fashion-forward millennials",
+                "Urban professionals",
+                "Style-conscious individuals",
+                "Sustainable fashion enthusiasts"
+            ],
+            "products": [
+                {
+                    "id": "CL001",
+                    "name": "Premium Denim Jacket",
+                    "category": "Outerwear",
+                    "price": 89.99,
+                    "description": "Classic denim jacket with modern details, made from sustainable materials",
+                    "features": [
+                        "100% organic cotton denim",
+                        "Recycled metal hardware",
+                        "Multiple pockets",
+                        "Adjustable cuffs",
+                        "Machine washable"
+                    ],
+                    "specifications": {
+                        "sizes": ["XS", "S", "M", "L", "XL"],
+                        "colors": ["Classic Blue", "Black", "Light Wash"],
+                        "material": "Organic cotton denim",
+                        "care": "Machine wash cold",
+                        "origin": "Made in Portugal"
+                    },
+                    "target_audience": [
+                        "Young professionals",
+                        "Fashion enthusiasts",
+                        "Urban commuters",
+                        "Sustainable fashion buyers"
+                    ],
+                    "use_cases": [
+                        "Casual wear",
+                        "Transitional weather",
+                        "Urban commuting",
+                        "Weekend outings"
+                    ],
+                    "common_concerns": [
+                        "Size availability",
+                        "Color fastness",
+                        "Care instructions",
+                        "Durability"
+                    ],
+                    "warranty": "1 year",
+                    "in_stock": true,
+                    "rating": 4.7,
+                    "reviews_count": 450,
+                    "delivery_options": [
+                        "Standard shipping",
+                        "Express delivery",
+                        "Store pickup",
+                        "Same-day delivery (local)"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Machine wash cold, tumble dry low, iron if needed"
+                },
+                {
+                    "id": "CL002",
+                    "name": "Essential T-Shirt Pack",
+                    "category": "Basics",
+                    "price": 49.99,
+                    "description": "Pack of 3 essential t-shirts made from organic cotton, perfect for everyday wear",
+                    "features": [
+                        "100% organic cotton",
+                        "Pre-shrunk fabric",
+                        "Comfortable fit",
+                        "Tagless design",
+                        "Sustainable packaging"
+                    ],
+                    "specifications": {
+                        "sizes": ["S", "M", "L", "XL"],
+                        "colors": ["Black", "White", "Navy"],
+                        "material": "Organic cotton",
+                        "care": "Machine wash cold",
+                        "origin": "Made in Turkey"
+                    },
+                    "target_audience": [
+                        "Minimalist fashion lovers",
+                        "Budget-conscious buyers",
+                        "Sustainable shoppers",
+                        "Everyday wear seekers"
+                    ],
+                    "use_cases": [
+                        "Daily wear",
+                        "Layering",
+                        "Casual outfits",
+                        "Athletic wear"
+                    ],
+                    "common_concerns": [
+                        "Fabric quality",
+                        "Size consistency",
+                        "Color retention",
+                        "Value for money"
+                    ],
+                    "warranty": "30 days",
+                    "in_stock": true,
+                    "rating": 4.5,
+                    "reviews_count": 780,
+                    "delivery_options": [
+                        "Standard shipping",
+                        "Express delivery",
+                        "Store pickup"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Machine wash cold, tumble dry low"
+                },
+                {
+                    "id": "CL003",
+                    "name": "Slim Fit Chinos",
+                    "category": "Pants",
+                    "price": 69.99,
+                    "description": "Modern slim fit chinos with stretch comfort, perfect for both casual and semi-formal occasions",
+                    "features": [
+                        "Stretch cotton blend",
+                        "Slim fit design",
+                        "Multiple pockets",
+                        "Adjustable waist",
+                        "Wrinkle-resistant"
+                    ],
+                    "specifications": {
+                        "sizes": ["28", "30", "32", "34", "36", "38"],
+                        "colors": ["Khaki", "Navy", "Black", "Olive"],
+                        "material": "98% cotton, 2% elastane",
+                        "care": "Machine wash cold",
+                        "origin": "Made in Vietnam"
+                    },
+                    "target_audience": [
+                        "Young professionals",
+                        "Office workers",
+                        "Style-conscious men",
+                        "Business casual wearers"
+                    ],
+                    "use_cases": [
+                        "Office wear",
+                        "Casual Friday",
+                        "Weekend outings",
+                        "Business casual"
+                    ],
+                    "common_concerns": [
+                        "Fit consistency",
+                        "Color options",
+                        "Durability",
+                        "Wrinkle resistance"
+                    ],
+                    "warranty": "1 year",
+                    "in_stock": true,
+                    "rating": 4.6,
+                    "reviews_count": 320,
+                    "delivery_options": [
+                        "Standard shipping",
+                        "Express delivery",
+                        "Store pickup",
+                        "Same-day delivery (local)"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Machine wash cold, tumble dry low, iron if needed"
+                },
+                {
+                    "id": "CL004",
+                    "name": "Sustainable Sneakers",
+                    "category": "Footwear",
+                    "price": 129.99,
+                    "description": "Eco-friendly sneakers made from recycled materials, combining style and sustainability",
+                    "features": [
+                        "Recycled materials",
+                        "Comfortable cushioning",
+                        "Breathable upper",
+                        "Removable insoles",
+                        "Recyclable packaging"
+                    ],
+                    "specifications": {
+                        "sizes": ["US 7-12", "EU 40-46"],
+                        "colors": ["White", "Black", "Navy"],
+                        "material": "Recycled polyester, rubber",
+                        "care": "Spot clean",
+                        "origin": "Made in Portugal"
+                    },
+                    "target_audience": [
+                        "Environmentally conscious consumers",
+                        "Urban commuters",
+                        "Fashion-forward individuals",
+                        "Sustainable fashion enthusiasts"
+                    ],
+                    "use_cases": [
+                        "Daily wear",
+                        "Urban commuting",
+                        "Casual outings",
+                        "Light exercise"
+                    ],
+                    "common_concerns": [
+                        "Comfort",
+                        "Durability",
+                        "Size accuracy",
+                        "Cleaning instructions"
+                    ],
+                    "warranty": "1 year",
+                    "in_stock": true,
+                    "rating": 4.8,
+                    "reviews_count": 190,
+                    "delivery_options": [
+                        "Standard shipping",
+                        "Express delivery",
+                        "Store pickup"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Spot clean with mild detergent, air dry"
+                }
+            ]
+        },
+        {
+            "id": "GRO001",
+            "name": "Dr. Squatch",
+            "description": "Premium men's natural soap and grooming products with a laid-back, humorous approach to personal care",
+            "location": {
+                "address": "Online Only - No Physical Stores",
+                "phone": "(800) SQUATCH-1",
+                "email": "support@drsquatch.com",
+                "hours": "24/7 Online Support"
+            },
+            "features": [
+                "Natural ingredients",
+                "Subscription service",
+                "Customizable bundles",
+                "Gift sets",
+                "Limited edition releases"
+            ],
+            "target_audience": [
+                "Young men (18-35)",
+                "Gym enthusiasts",
+                "Outdoor adventurers",
+                "Gift shoppers",
+                "Humor-loving consumers"
+            ],
+            "products": [
+                {
+                    "id": "SQ001",
+                    "name": "Pine Tar Soap",
+                    "category": "Soap",
+                    "price": 7.99,
+                    "description": "Our signature soap with a manly pine tar scent and natural exfoliants",
+                    "features": [
+                        "Natural pine tar",
+                        "Exfoliating oatmeal",
+                        "Long-lasting scent",
+                        "Moisturizing formula",
+                        "Suitable for all skin types"
+                    ],
+                    "specifications": {
+                        "weight": "5 oz",
+                        "scent": "Pine Tar",
+                        "ingredients": "Natural oils, pine tar, oatmeal",
+                        "shelf_life": "24 months",
+                        "origin": "Made in USA"
+                    },
+                    "target_audience": [
+                        "Outdoor enthusiasts",
+                        "Traditional soap users",
+                        "Men seeking natural products",
+                        "Gift givers"
+                    ],
+                    "use_cases": [
+                        "Daily shower",
+                        "Post-workout",
+                        "Camping trips",
+                        "Gift giving"
+                    ],
+                    "common_concerns": [
+                        "Scent strength",
+                        "Skin sensitivity",
+                        "Longevity",
+                        "Value for money"
+                    ],
+                    "warranty": "100% satisfaction guarantee",
+                    "in_stock": true,
+                    "rating": 4.8,
+                    "reviews_count": 12500,
+                    "delivery_options": [
+                        "Standard shipping (3-5 days)",
+                        "Express shipping (1-2 days)",
+                        "Subscription delivery"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Keep in a dry place, away from direct sunlight"
+                },
+                {
+                    "id": "SQ002",
+                    "name": "Fresh Falls Soap",
+                    "category": "Soap",
+                    "price": 7.99,
+                    "description": "Refreshing citrus and mint scented soap for an invigorating shower experience",
+                    "features": [
+                        "Citrus and mint blend",
+                        "Natural exfoliants",
+                        "Cooling sensation",
+                        "Long-lasting freshness",
+                        "Moisturizing formula"
+                    ],
+                    "specifications": {
+                        "weight": "5 oz",
+                        "scent": "Fresh Falls",
+                        "ingredients": "Natural oils, citrus extracts, mint",
+                        "shelf_life": "24 months",
+                        "origin": "Made in USA"
+                    },
+                    "target_audience": [
+                        "Active men",
+                        "Morning shower enthusiasts",
+                        "Fresh scent lovers",
+                        "Gym goers"
+                    ],
+                    "use_cases": [
+                        "Morning shower",
+                        "Post-workout",
+                        "Summer use",
+                        "Travel"
+                    ],
+                    "common_concerns": [
+                        "Scent intensity",
+                        "Cooling effect",
+                        "Skin compatibility",
+                        "Scent longevity"
+                    ],
+                    "warranty": "100% satisfaction guarantee",
+                    "in_stock": true,
+                    "rating": 4.7,
+                    "reviews_count": 8900,
+                    "delivery_options": [
+                        "Standard shipping (3-5 days)",
+                        "Express shipping (1-2 days)",
+                        "Subscription delivery"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Keep in a dry place, away from direct sunlight"
+                },
+                {
+                    "id": "SQ003",
+                    "name": "Hair Care Bundle",
+                    "category": "Hair Care",
+                    "price": 24.99,
+                    "description": "Complete hair care set with shampoo, conditioner, and styling products",
+                    "features": [
+                        "Natural ingredients",
+                        "Sulfate-free formula",
+                        "Styling products included",
+                        "Travel-sized options",
+                        "Subscription available"
+                    ],
+                    "specifications": {
+                        "contents": ["Shampoo", "Conditioner", "Hair styling cream"],
+                        "sizes": ["8 oz each"],
+                        "scent": "Fresh Falls",
+                        "shelf_life": "24 months",
+                        "origin": "Made in USA"
+                    },
+                    "target_audience": [
+                        "Style-conscious men",
+                        "Grooming enthusiasts",
+                        "Travelers",
+                        "Gift shoppers"
+                    ],
+                    "use_cases": [
+                        "Daily hair care",
+                        "Travel grooming",
+                        "Gift giving",
+                        "Styling routine"
+                    ],
+                    "common_concerns": [
+                        "Product effectiveness",
+                        "Value for money",
+                        "Scent consistency",
+                        "Travel convenience"
+                    ],
+                    "warranty": "100% satisfaction guarantee",
+                    "in_stock": true,
+                    "rating": 4.6,
+                    "reviews_count": 3200,
+                    "delivery_options": [
+                        "Standard shipping (3-5 days)",
+                        "Express shipping (1-2 days)",
+                        "Subscription delivery"
+                    ],
+                    "seasonal_availability": "Year-round",
+                    "care_instructions": "Store in a cool, dry place"
+                },
+                {
+                    "id": "SQ004",
+                    "name": "Limited Edition Soap Collection",
+                    "category": "Special Edition",
+                    "price": 39.99,
+                    "description": "Exclusive collection of seasonal and limited edition soaps with unique scents",
+                    "features": [
+                        "Limited time availability",
+                        "Unique scent combinations",
+                        "Special packaging",
+                        "Collector's items",
+                        "Gift-ready presentation"
+                    ],
+                    "specifications": {
+                        "contents": "4 unique soap bars",
+                        "weight": "5 oz each",
+                        "scent_variety": "Seasonal",
+                        "shelf_life": "24 months",
+                        "origin": "Made in USA"
+                    },
+                    "target_audience": [
+                        "Collectors",
+                        "Gift givers",
+                        "Scent enthusiasts",
+                        "Dr. Squatch fans"
+                    ],
+                    "use_cases": [
+                        "Gift giving",
+                        "Collection building",
+                        "Special occasions",
+                        "Trying new scents"
+                    ],
+                    "common_concerns": [
+                        "Availability",
+                        "Scent variety",
+                        "Value for money",
+                        "Collection completeness"
+                    ],
+                    "warranty": "100% satisfaction guarantee",
+                    "in_stock": true,
+                    "rating": 4.9,
+                    "reviews_count": 1500,
+                    "delivery_options": [
+                        "Standard shipping (3-5 days)",
+                        "Express shipping (1-2 days)",
+                        "Subscription delivery"
+                    ],
+                    "seasonal_availability": "Limited time",
+                    "care_instructions": "Keep in a dry place, away from direct sunlight"
+                }
+            ]
+        }
+    ]
+} 
