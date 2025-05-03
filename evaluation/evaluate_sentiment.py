@@ -131,8 +131,7 @@ def main():
     logging.info(f"Loaded dataset with {len(df)} samples.")
 
     # Define models
-    # models = ["llama3:8b", "deepseek-llm:7b", "gemma3"]
-    models = ["mistral"]
+    models = ["llama3:8b", "deepseek-llm:7b", "mistral"]
 
     sample_text = "Several years ago I purchased these moth traps and they were filled in a matter of days.  I received these a few weeks ago and they have remained empty with the moths flying nearby.  I suppose like everything else - they changed the formula or something.  Soooooo disappointed."
     sample_prediction = analyze_sentiment(ollama.Client(), sample_text, ["ProductA"], "llama3:8b")

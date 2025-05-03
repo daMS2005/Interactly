@@ -142,7 +142,7 @@ def main():
 
     # Define product list and models
     product_list = ["ProductA", "ProductB", "ProductC"]  # Products aren't used here - it's just a placeholder
-    models = ["llama3:8b"]
+    models = ["llama3:8b", "deepseek-llm:7b", "mistral"]
 
     # Evaluate each model and save results
     for model_name in models:
